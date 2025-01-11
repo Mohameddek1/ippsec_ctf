@@ -1,0 +1,4 @@
+looking for dns 
+
+Cron Job
+laravel schedule command

@@ -1,0 +1,48 @@
+
+cat /etc/lsb-release --> llinux release
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+# File Integrity and Corruption Detection
+
+## Steps to Check if a File is Corrupted
+
+### 1. Verify Checksum Using Hashes
+- Use a hashing tool like `md5sum` or `sha256sum` to compute the file's hash.
+- Compare the computed hash with the trusted hash provided by the source.
+
+**Example**:
+```bash
+md5sum filename
+sha256sum filename
+
+------------------------------------------------------------------------------------
+
+
+# Steps to Compare Two Source Code Versions
+1. Generate MD5 Checksums for Each File
+
+For both versions (e.g., version_latest and version_old), compute the MD5 hashes of all files:
+
+cd version_latest
+find . -type f -exec md5sum {} \; > ../latest_checksums.md5
+
+cd ../version_old
+find . -type f -exec md5sum {} \; > ../old_checksums.md5
+
+    - The find command computes the hash of all files in the directory and its subdirectories.
+    - The md5sum output is saved in files latest_checksums.md5 and old_checksums.md5.
+
+2. Compare the Checksum Files
+
+Compare the two checksum files to identify which files have changed, been added, or removed:
+
+diff -u old_checksums.md5 latest_checksums.md5
+
+    - Files that differ will be shown in the output.
+    - Lines starting with - are from the old version, and lines starting with + are from the latest version.

@@ -1,0 +1,10 @@
+tools:
+-python pty shells
+
+MOTD --> 
+    -unauthorized information disclosure
+    -Code Injection in Dynamic MOTD Scripts
+    -Symbolic Link Attack
+
+searchsploit MOTD
+checking linux PAM version --> dpkg -l | grep -i pam

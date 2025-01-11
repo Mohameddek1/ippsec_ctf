@@ -1,0 +1,9 @@
+wordpress website
+
+Image:
+binwalk <image>  --> finds hidden files
+steghide extract -sf <image>  --> extracts hidden files
+
+decrypting id_rsa file
+python sshng2john.py id_rsa > id_rsa.hash
+john id_rsa.hash --wordlist=/usr/share/john/password.lst
