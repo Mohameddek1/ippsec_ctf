@@ -1,0 +1,6 @@
+learned:
+1. Telnet email shellshock
+2. CGI shellshock
+3. Dirty cow
+4. LFI
+5. 

@@ -1,0 +1,9 @@
+learned:
+1. java class file can be decompiled using `jad` tool
+2. java class file can also be decompiled using `jd-gui` tool
+3. wpscan --> for wordpress scan
+4. linux exploit suggester
+5. How scp Works
+    -Encryption: Uses SSH to encrypt the transfer.
+    -Authentication: Uses SSH credentials (username, password, or key-based authentication).
+    - File Copy: Transfers files or directories from one machine to another.
