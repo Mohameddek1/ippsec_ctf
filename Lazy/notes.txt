@@ -1,0 +1,17 @@
+1. bit-flipping attack --> is a cryptographic attack where an attacker manipulates ciphertext to control how it decrypts into plaintext, even without knowing the encryption key. It’s most effective in encryption schemes that are vulnerable to bit-level manipulation, like AES-CBC (Cipher Block Chaining) mode.
+
+2. padding oracle attack 
+    - Finding a padding oracle involves testing how a system responds when invalid or tampered ciphertexts are sent. A system that leaks information about whether the padding is valid or invalid is vulnerable to a padding oracle attack.
+    - perl padBuster.pl --> to attack the padding oracle
+    - indicators:
+        - Explicit Error Messages:
+            E.g., Invalid padding, Decryption failed, Bad padding.
+        - Behavioral Differences:
+            Different HTTP status codes (e.g., 500 for invalid padding, 200 for valid padding).
+        - Encrypted Tokens:
+            Modify a ciphertext token and see if the server reacts differently.
+
+3. path hijacking in linux --> is a technique that allows an attacker to hijack the path of a packet, which can be used to redirect the packet to a different destination.
+- e.g. create fake cat, 
+- then export PATH=`pwd`:$PATH, 
+- echo $PATH, 

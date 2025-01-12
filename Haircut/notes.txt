@@ -1,0 +1,2 @@
+1. curl injection --> attackers often exploit improperly sanitized user inputs in applications where curl is used to fetch data from a URL.
+2. searchsploit --> searchsploit is a command-line utility that allows you to search for exploits on exploit-db.com.
