@@ -1,0 +1,13 @@
+df -lh  --> shows the disk usage
+mount --> shows the mounted filesystems
+
+Recorvering deleted text
+strings <file>
+xxd <file> | grep '0000 0000 0000 0000 0000 0000 0000 0000'
+
+grep '[a-z0-9]\{32\}' <file>
+grep -a -B1 -A1 '[a-z0-9]\{32\}' <file>
+
+ssh pi@192.168.1.10 "sudo dcfldd if=/dev/sda | gzip -l -" dcfldd of=/dev/mmcblk0  --> to copy
+
+du -hs pi.dd.gz  --> shows the size of the file

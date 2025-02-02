@@ -1,4 +1,12 @@
 RsaCtfTool.py --> to crack rsa keys
     e.g. RsaCtfTool.py -p <public_key> --uncipher <ciphertext>
 
-msieve --> to factorize large numbers
+msieve --> to factorize large numbers that will give me p and q values
+
+n = <large_number>
+e = 65537
+p = <large_prime>
+q = <large_prime>
+m = n - (p+q-1)
+
+d = e^-1 mod (p-1)(q-1)
